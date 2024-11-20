@@ -4,8 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sample</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>4-2</title>
 </head>
 <body>
+    <div id="app">
+        <div class="form-area_name">
+            <p>名前</p>
+            <input v-model="name" type="text" name="name"/>
+            <p v-if="isInValidName" class="error">
+                名前は4文字以上で入力してください
+            </p>
+        </div>
+        <div class="form-area__tel">
+            <p>電話番号</p>
+            <input v-model="tel" type="tel" name="tel"/>
+            <p v-if="isInValidTel" class="error">
+                電話番号はは8文字以上で入力してください
+            </p>
+        </div>
+        <div class="form-area__email">
+            <p>メールアドレス</p>
+            <input v-model="email" type="text" name="email"/>
+            <p v-if="isInValidEmail" class="error">
+                メールアドレスの形式で入力してください
+            </p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>
